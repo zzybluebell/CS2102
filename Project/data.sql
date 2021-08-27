@@ -1,0 +1,455 @@
+-- Employees
+insert into Employees(name, address, phone, email, join_date) values ('Yun Zheng', '161 Lavender St #02-07, 338750, Singapore', '62977177', 'yunzheng@gmail.com', '2020-04-01');
+insert into Employees(name, address, phone, email, join_date) values ('Jing Liu', '16 Wan Lee Road JURONG INDUSTRIAL ESTATE, 627946, Singapore', '62683433', 'jingliu@gmail.com', '2020-03-01');
+insert into Employees(name, address, phone, email, join_date) values ('Huang Shi', '14th Floor, Dalamal Towers, 445561 Mumbai, Singapore', '62938643', 'huangshi@gmail.com',  '2020-03-20');
+insert into Employees(name, address, phone, email, join_date) values ('Hong Hou', '31 Kaki Bukit Road 3 #06-08/11 Techlink, 417818, Singapore', '67452422', 'honghou@gmail.com', '2020-08-18');
+insert into Employees(name, address, phone, email, join_date) values ('Chen Fang', '24 Raffles Place #26-06 Clifford Centre, 048621, Singapore', '62361502', 'chenfang@gmail.com', '2020-06-11');
+insert into Employees(name, address, phone, email, join_date) values ('ZhenKang Chen', '3 Mount Elizabeth #15-10 MOUNT ELIZABETH HOSPITAL / MEDICAL CENTRE, 228510, Singapore', '67359654', 'zhenkangchen@gmail.com','2020-01-22');
+insert into Employees(name, address, phone, email, join_date) values ('Lim Yao', '25 International Business Park #03-13/14 German Centre Singapore 609916, Singapore', '65628750', 'limyao@gmail.com', '2020-01-22');
+insert into Employees(name, address, phone, email, join_date) values ('Chang Yu', '71 Ayer Rajah Crescent 05-25, 139951, Singapore', '67795122', 'changyu@gmail.com', '2020-05-12');
+insert into Employees(name, address, phone, email, join_date) values ('Hu Lu', '28A Temple Street, 058573, Singapore', '62223558', 'hulu@gmail.com', '2020-12-27');
+insert into Employees(name, address, phone, email, join_date) values ('Ping Duan', '2 Geylang East Avenue 2 #04-109, 389754, Singapore', '62731188', 'pingduan@gmail.com','2020-02-05');
+insert into Employees(name, address, phone, email, join_date) values ('Jian Tao', '150 Neil Road, 088879, Singapore', '64911010', 'jiantao@gmail.com', '2020-02-01');
+insert into Employees(name, address, phone, email, join_date) values ('Ju Du', '172a 6th Ave. 276545, Singapore', '64670989', 'judu@gmail.com', '2020-05-25');
+insert into Employees(name, address, phone, email, join_date) values ('Kun Yin', '10 admiralty street #05-13 North Link building 757695, Singapore', '85185036', 'kunyin@gmail.com', '2020-03-14');
+insert into Employees(name, address, phone, email, join_date) values ('Zhenya Zhao', '10 admiralty street #05-13 North Link building 757695, Singapore', '63255777', 'zhenyazhao@gmail.com','2021-01-16');
+insert into Employees(name, address, phone, email, join_date) values ('Shi Qiao', '29/31 Dalhousie Lane, 209691, Singapore', '62913939', 'shiqiao@gmail.com', '2020-04-14');
+insert into Employees(name, address, phone, email, join_date) values ('Cheng Qiao', '79 Anson Road #23-01 79 Anson Road, 079906, Singapore', '62296100', 'chenqiao@gmail.com', '2020-03-26');
+insert into Employees(name, address, phone, email, join_date) values ('Cheng Hao', '100 Jurong Island Highway, 627867, Singapore', '63164279', 'chenhao@gmail.com', '2020-02-14');
+insert into Employees(name, address, phone, email, join_date) values ('Yazhu Wei', '511 Kampong Bahru Road #03-02 Keppel Distripark, 099447, Singapore', '62729929', 'yazhuwei@gmail.com', '2020-01-26');
+insert into Employees(name, address, phone, email, join_date) values ('Zhihao Xing', '103 Boon Keng Road #04-14/15 Kallang Basin Industrial Estate, 339774, Singapore', '62982526', 'zhihaoxing@gmail.com', '2020-06-02');
+insert into Employees(name, address, phone, email, join_date) values ('ZhenKang He', '20 Ang Mo Kio Industrial Park 2A #05-04 AMK Tech Link, 567761, Singapore', '64831508', 'zhenkanghe@gmail.com', '2020-02-18');
+insert into Employees(name, address, phone, email, join_date) values ('Xia Zhu', 'Great World City 1 Kim Seng Promenade #15-07 237994, Singapore', '67350550', 'xiazhu@gmail.com','2020-02-19');
+insert into Employees(name, address, phone, email, join_date) values ('Nuan Huang', '6001 Beach Rd, #02-14, 199589 Golden Mile Tower, Singapore', '65612104', 'nuanhuang@gmail.com', '2020-12-07');
+insert into Employees(name, address, phone, email, join_date) values ('Hong Quan', '196 Pandan Loop #05-24, 128384, Singapore', '67732207', 'hongquan@gmail.com', '2020-04-16');
+insert into Employees(name, address, phone, email, join_date) values ('Zexian Tian', '23 Jalan Lokam, 537869, Singapore', '64825335', 'zexiantian@gmail.com', '2020-05-10');
+insert into Employees(name, address, phone, email, join_date) values ('Hu Bai', '1020 Tai Seng Avenue #06-3500/6 TAI SENG INDUSTRIAL ESTATE, 534416, Singapore', '62879902', 'hubai@gmail.com', '2020-01-17');
+insert into Employees(name, address, phone, email, join_date) values ('Huan Xian', '1 Tech Park Crescent Tuas Tech Park, 638131, Singapore', '68613333', 'huanxian@gmail.com', '2020-02-19');
+insert into Employees(name, address, phone, email, join_date) values ('Wuying Kong', '#01-1195 , Blk 12 Toa Payoh Ind Pk Lor 8, Singapore', '62563631', 'wuyingkong@gmail.com', '2020-04-26');
+insert into Employees(name, address, phone, email, join_date) values ('Jiahao Zheng', '400 Orchard Road, 21-06 Orchard Tower 238875, Singapore', '67359595', 'jiahaozheng@gmail.com', '2020-07-07');
+insert into Employees(name, address, phone, email, join_date) values ('ZhenKang Xing', 'Paya Ubi Industrial Park 51 Ubi Avenue 1 #05-08 408933, Singapore', '67413886', 'zhenkangxing@gmail.com', '2020-06-07');
+insert into Employees(name, address, phone, email, join_date) values ('Hua Kong', 'Jamnagar, 451233 Shanker Tekri Udoygnagar, Singapore', '62682828', 'huakong@gmail.com', '2020-08-13');
+insert into Employees(name, address, phone, email, join_date) values ('Yahui Zhan', '627A Aljunied Road #06-10/11 Biztech Centre Singapore 389842, Singapore', '68462350', 'yahuizhan@gmail.com', '2020-05-15');
+insert into Employees(name, address, phone, email, join_date) values ('Hanying Yan', '142 tagore lane, 787561, Singapore', '62250882', 'hanyingyan@gmail.com', '2020-11-11');
+insert into Employees(name, address, phone, email, join_date) values ('Jianhong Cheng', '61, Chestnut Dr Singapore 679303, Singapore', '67652155', 'jianhongcheng@gmail.com', '2020-07-27');
+insert into Employees(name, address, phone, email, join_date) values ('Xue Zi', '71 ubi crescent 08-03, excalibur centre, 408571, Singapore', '68624866', 'xuezi@gmail.com', '2020-04-19');
+insert into Employees(name, address, phone, email, join_date) values ('Tu Shen', 'Ang Mo Kio (AMK) Tech 1 3 Ang Mo Kio Industrial Park 2a #04-14 568050, Singapore', '64831711', 'tushen@gmail.com', '2020-07-28');
+insert into Employees(name, address, phone, email, join_date) values ('Zan Shen', '18 Tannery Lane 289674, Singapore', '67450318', 'zanshen@gmail.com', '2020-12-02');
+insert into Employees(name, address, phone, email, join_date) values ('Fen Gong', '6 Tagore Drive #01-17 TAGORE INDUSTRIAL BUILDING, 787623, Singapore', '64523113', 'fengong@gmail.com','2020-10-11');
+insert into Employees(name, address, phone, email, join_date) values ('Da Zheng', '22 Ubi Road 4 FULCO BUILDING, 408617, Singapore', '63252868', 'dazheng@gmail.com', '2020-09-11');
+insert into Employees(name, address, phone, email, join_date) values ('Lingxin Huang', 'Millenia Walk 9 Raffles Boulevard #02-33/#02-36A 039596, Singapore', '63339495', 'lingxinhuang@gmail.com', '2021-01-24');
+insert into Employees(name, address, phone, email, join_date) values ('Zhong Tao', '9 Tuas View Crescent, 637612, Singapore', '62667578', 'zhongtao@gmail.com', '2020-05-16');
+
+-- Pay_slips_For
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 7500.00, 30, 1);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 5000.00, 30, 2);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 5500.00, 30, 3);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 6000.00, 30, 4);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 8000.00, 30, 5);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 2500.00, 30, 6);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 3500.00, 30, 7);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 7500.00, 30, 8);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 3500.00, 30, 9);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 8000.00, 30, 10);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 3000.00, 30, 11);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 3700.00, 30, 12);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 3400.00, 30, 13);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 4500.00, 30, 14);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 5500.00, 30, 15);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 4500.00, 30, 16);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 5700.00, 30, 17);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 5500.00, 30, 18);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 6000.00, 30, 19);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 5000.00, 30, 20);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 5500.00, 30, 21);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 7000.00, 30, 22);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 6500.00, 30, 23);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 5000.00, 30, 24);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 6000.00, 30, 25);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 7000.00, 30, 26);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 4500.00, 30, 27);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 7000.00, 30, 28);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 6000.00, 30, 29);
+insert into Pay_slips_For(payment_date, amount, num_work_days,eid) values ('2021-04-10', 6000.00, 30, 30);
+insert into Pay_slips_For(payment_date, amount, num_work_hours, eid) values ('2021-04-10', 0.00, 0, 31);
+insert into Pay_slips_For(payment_date, amount, num_work_hours, eid) values ('2021-04-10', 0.00, 0, 32);
+insert into Pay_slips_For(payment_date, amount, num_work_hours, eid) values ('2021-04-10', 115.00, 1, 33);
+insert into Pay_slips_For(payment_date, amount, num_work_hours, eid) values ('2021-04-10', 0.00, 0, 34);
+insert into Pay_slips_For(payment_date, amount, num_work_hours, eid) values ('2021-04-10', 0.00, 0, 35);
+insert into Pay_slips_For(payment_date, amount, num_work_hours, eid) values ('2021-04-10', 0.00, 0, 36);
+insert into Pay_slips_For(payment_date, amount, num_work_hours, eid) values ('2021-04-10', 0.00, 0, 37);
+insert into Pay_slips_For(payment_date, amount, num_work_hours, eid) values ('2021-04-10', 200.00, 2, 38);
+insert into Pay_slips_For(payment_date, amount, num_work_hours, eid) values ('2021-04-10', 105.00, 1, 39);
+insert into Pay_slips_For(payment_date, amount, num_work_hours, eid) values ('2021-04-10', 105.00, 1, 40);
+
+-- Full_time_Emp
+insert into Full_time_Emp(eid, monthly_salary) values (1, 7500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (2, 5500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (3, 5000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (4, 6000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (5, 8000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (6, 2500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (7, 3500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (8, 7500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (9, 3500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (10, 8000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (11, 3000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (12, 3700.00);
+insert into Full_time_Emp(eid, monthly_salary) values (13, 3400.00);
+insert into Full_time_Emp(eid, monthly_salary) values (14, 4500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (15, 5500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (16, 4500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (17, 5700.00);
+insert into Full_time_Emp(eid, monthly_salary) values (18, 5500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (19, 6000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (20, 5000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (21, 5500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (22, 7000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (23, 6500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (24, 5000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (25, 6000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (26, 7000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (27, 4500.00);
+insert into Full_time_Emp(eid, monthly_salary) values (28, 7000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (29, 6000.00);
+insert into Full_time_Emp(eid, monthly_salary) values (30, 6000.00);
+
+-- Managers
+insert into Managers(eid) values (1);
+insert into Managers(eid) values (2);
+insert into Managers(eid) values (3);
+insert into Managers(eid) values (4);
+insert into Managers(eid) values (5);
+insert into Managers(eid) values (6);
+insert into Managers(eid) values (7);
+insert into Managers(eid) values (8);
+insert into Managers(eid) values (9);
+insert into Managers(eid) values (10);
+
+-- Administrators
+insert into Administrators(eid) values (11);
+insert into Administrators(eid) values (12);
+insert into Administrators(eid) values (13);
+insert into Administrators(eid) values (14);
+insert into Administrators(eid) values (15);
+insert into Administrators(eid) values (16);
+insert into Administrators(eid) values (17);
+insert into Administrators(eid) values (18);
+insert into Administrators(eid) values (19);
+insert into Administrators(eid) values (20);
+
+-- Part_time_Emp
+insert into Part_time_Emp(eid, hourly_rate) values (31, 120.00);
+insert into Part_time_Emp(eid, hourly_rate) values (32, 110.00);
+insert into Part_time_Emp(eid, hourly_rate) values (33, 115.00);
+insert into Part_time_Emp(eid, hourly_rate) values (34, 105.00);
+insert into Part_time_Emp(eid, hourly_rate) values (35, 125.00);
+insert into Part_time_Emp(eid, hourly_rate) values (36, 135.00);
+insert into Part_time_Emp(eid, hourly_rate) values (37, 120.00);
+insert into Part_time_Emp(eid, hourly_rate) values (38, 100.00);
+insert into Part_time_Emp(eid, hourly_rate) values (39, 105.00);
+insert into Part_time_Emp(eid, hourly_rate) values (40, 105.00);
+
+-- Instructors
+insert into Instructors values (21);
+insert into Instructors values (22);
+insert into Instructors values (23);
+insert into Instructors values (24);
+insert into Instructors values (25);
+insert into Instructors values (26);
+insert into Instructors values (27);       
+insert into Instructors values (28);       
+insert into Instructors values (29);       
+insert into Instructors values (30);
+insert into Instructors values (31);
+insert into Instructors values (32);
+insert into Instructors values (33);
+insert into Instructors values (34);
+insert into Instructors values (35);
+insert into Instructors values (36);
+insert into Instructors values (37);
+insert into Instructors values (38);
+insert into Instructors values (39);
+insert into Instructors values (40);
+
+-- Part_time_instructors
+insert into Part_time_instructors(eid) values (31);
+insert into Part_time_instructors(eid) values (32);
+insert into Part_time_instructors(eid) values (33);
+insert into Part_time_instructors(eid) values (34);
+insert into Part_time_instructors(eid) values (35);
+insert into Part_time_instructors(eid) values (36);
+insert into Part_time_instructors(eid) values (37);
+insert into Part_time_instructors(eid) values (38);
+insert into Part_time_instructors(eid) values (39);
+insert into Part_time_instructors(eid) values (40);
+
+-- Full_time_instructors
+insert into Full_time_instructors(eid) values (21);
+insert into Full_time_instructors(eid) values (22);
+insert into Full_time_instructors(eid) values (23);
+insert into Full_time_instructors(eid) values (24);
+insert into Full_time_instructors(eid) values (25);
+insert into Full_time_instructors(eid) values (26);
+insert into Full_time_instructors(eid) values (27);
+insert into Full_time_instructors(eid) values (28);
+insert into Full_time_instructors(eid) values (29);
+insert into Full_time_instructors(eid) values (30);
+
+-- Customers
+insert into Customers (address, phone, name, email) values ('6, Aljunied Ave 3 #04-00 Singapore 389932, Singapore', '67462222', 'Wu Huang', 'wuhuang@gmail.com');
+insert into Customers (address, phone, name, email) values ('5 shenton way 12-01, uic building, 068808, Singapore', '62240100', 'Yi Mo', 'yimo@gmail.com');
+insert into Customers (address, phone, name, email) values ('1 Kaki Bukit View #05-11 Techview, 415941, Singapore', '68418966', 'Xinya Qin', 'xinyaqin@gmail.com');
+insert into Customers (address, phone, name, email) values ('9 penang road #B1-07 Park Mall, 238459, Singapore', '68424477', 'Yu Yi', 'xiangyin@gmail.com');
+insert into Customers (address, phone, name, email) values ('Toa Payoh Lor 8 01-1477, 319074, Singapore', '96686468', 'Bi Gao', 'bigao@gmail.com');
+insert into Customers (address, phone, name, email) values ('507 Yishun Industrial Parka, 768734, Singapore', '67544113', 'Hai Xia', 'haixia@gmail.com');
+insert into Customers (address, phone, name, email) values ('10 Admiralty Street #05-47 NORTH LINK BUILDING, 757695, Singapore', '67529926', 'Jingyi Guo', 'jingyiguo@gmail.com');
+insert into Customers (address, phone, name, email) values ('105 Airport Cargo Road Sats Airfreight Centre, 819462, Singapore', '65464198', 'Lingxin Xu', 'lingxinxu@gmail.com');
+insert into Customers (address, phone, name, email) values ('77 Commonwealth Drive 01-523, 140077, Singapore', '83038335', 'Hong Teng', 'hongteng@gmail.com');
+insert into Customers (address, phone, name, email) values ('10 Admiralty Road, 03-09 Northlink Building 757695, Singapore', '96828005', 'Xinyi Xia', 'xinyixia@gmail.com');
+
+-- Credit_cards
+insert into Credit_cards (number, expiry_year, expiry_month, CVV, cust_id) values ('6203493828861897', 2023, 5, '239', 1);
+insert into Credit_cards (number, expiry_year, expiry_month, CVV, cust_id) values ('6500226978955956', 2026, 9, '248', 2);
+insert into Credit_cards (number, expiry_year, expiry_month, CVV, cust_id) values ('8820149867343986', 2029, 6, '835', 3);
+insert into Credit_cards (number, expiry_year, expiry_month, CVV, cust_id) values ('4788874639126448', 2026, 6, '831', 4);
+insert into Credit_cards (number, expiry_year, expiry_month, CVV, cust_id) values ('6201377713642235', 2024, 1, '509', 5);
+insert into Credit_cards (number, expiry_year, expiry_month, CVV, cust_id) values ('6393483847663838', 2029, 3, '154', 6);
+insert into Credit_cards (number, expiry_year, expiry_month, CVV, cust_id) values ('3406668633600187', 2030, 10, '704', 7);
+insert into Credit_cards (number, expiry_year, expiry_month, CVV, cust_id) values ('6364690085116833', 2025, 11, '859', 8);
+insert into Credit_cards (number, expiry_year, expiry_month, CVV, cust_id) values ('5019858506647485', 2025, 05, '259', 9);
+insert into Credit_cards (number, expiry_year, expiry_month, CVV, cust_id) values ('3034275660436553', 2029, 12, '873', 10);
+
+-- Course_packages
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-01-05', 4, '2021-04-20', 'Spring Package 1', 666.66);
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-02-20', 3, '2021-05-01', 'Spring Package 2', 545.57);
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-04-01', 4, '2021-05-10', 'Summer Package 1', 896.45);
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-04-02', 5, '2021-05-26', 'Summer Package 2', 435.78);
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-04-03', 3, '2021-05-27', 'Summer Package 3', 967.23);
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-04-04', 5, '2021-05-28', 'Summer Package 4', 745.47);
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-07-11', 3, '2021-08-22', 'Fall Package 1', 676.67);
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-08-01', 2, '2021-10-08', 'Fall Package 2', 868.86);
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-09-15', 4, '2021-10-16', 'Fall Package 3', 979.97);
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-10-04', 2, '2022-10-30', 'Winter Package 1', 745.34);
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-10-30', 2, '2021-11-16', 'Winter Package 2', 623.56);
+insert into Course_packages (sale_start_date, num_free_registrations, sale_end_date, name, price) values ('2021-12-02', 2, '2021-12-31', 'Winter Package 3', 523.78);
+
+-- Rooms
+insert into Rooms values (1, '#1-11', 5);
+insert into Rooms values (2, '#1-12', 9);
+insert into Rooms values (3, '#1-13', 4);
+insert into Rooms values (4, '#1-14', 6);
+insert into Rooms values (5, '#1-15', 5);
+insert into Rooms values (6, '#1-16', 4);
+insert into Rooms values (7, '#1-17', 8);
+insert into Rooms values (8, '#1-18', 7);
+insert into Rooms values (9, '#1-19', 6);
+insert into Rooms values (10, '#1-20', 5);
+
+-- Course_areas_Manages
+insert into Course_areas_Manages (name, eid) values ('A', 1);
+insert into Course_areas_Manages (name, eid) values ('B', 1);
+insert into Course_areas_Manages (name, eid) values ('C', 1);
+insert into Course_areas_Manages (name, eid) values ('D', 2);
+insert into Course_areas_Manages (name, eid) values ('E', 2);
+insert into Course_areas_Manages (name, eid) values ('F', 2);
+insert into Course_areas_Manages (name, eid) values ('G', 3);
+insert into Course_areas_Manages (name, eid) values ('H', 3);
+insert into Course_areas_Manages (name, eid) values ('I', 4);
+insert into Course_areas_Manages (name, eid) values ('J', 4);
+insert into Course_areas_Manages (name, eid) values ('K', 5);
+insert into Course_areas_Manages (name, eid) values ('L', 5);
+insert into Course_areas_Manages (name, eid) values ('M', 5);
+insert into Course_areas_Manages (name, eid) values ('N', 5);
+insert into Course_areas_Manages (name, eid) values ('O', 6);
+insert into Course_areas_Manages (name, eid) values ('P', 7);
+insert into Course_areas_Manages (name, eid) values ('Q', 8);
+insert into Course_areas_Manages (name, eid) values ('R', 8);
+insert into Course_areas_Manages (name, eid) values ('S', 8);
+insert into Course_areas_Manages (name, eid) values ('T', 8);
+insert into Course_areas_Manages (name, eid) values ('U', 9);
+insert into Course_areas_Manages (name, eid) values ('V', 9);
+insert into Course_areas_Manages (name, eid) values ('W', 10);
+insert into Course_areas_Manages (name, eid) values ('X', 10);
+insert into Course_areas_Manages (name, eid) values ('Y', 10);
+insert into Course_areas_Manages (name, eid) values ('Z', 10);
+
+-- Courses_In
+insert into Courses_In(duration, description, title, name) values (3, 'AAAAA1', 'AAA1', 'A');
+insert into Courses_In(duration, description, title, name) values (4, 'AAAAA2', 'AAA2', 'A');
+insert into Courses_In(duration, description, title, name) values (2, 'BBBBB1', 'BBB1', 'B');
+insert into Courses_In(duration, description, title, name) values (3, 'BBBBB2', 'BBB2', 'B');
+insert into Courses_In(duration, description, title, name) values (4, 'BBBBB3', 'BBB3', 'B');
+insert into Courses_In(duration, description, title, name) values (2, 'CCCCC1', 'CCC1', 'C');
+insert into Courses_In(duration, description, title, name) values (4, 'CCCCC2', 'CCC2', 'C');
+insert into Courses_In(duration, description, title, name) values (3, 'DDDDD1', 'DDD1', 'D');
+insert into Courses_In(duration, description, title, name) values (4, 'DDDDD2', 'DDD2', 'D');
+insert into Courses_In(duration, description, title, name) values (5, 'GGGGG3', 'GGG3', 'G');
+
+-- Offerings_Has_Handles
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-01', 1, '2021-04-30', '2021-04-30', '2021-04-17', 10, 19, 435.66, 11);
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-02', 2, '2021-04-29', '2021-04-29', '2021-04-16', 20, 22, 756.77, 12);
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-03', 2, '2021-04-28', '2021-04-28', '2021-04-15', 15, 16, 236.88, 13);
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-04', 2, '2021-04-26', '2021-04-26', '2021-04-14', 21, 25, 876.99, 14);
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-05', 3, '2021-04-27', '2021-04-27', '2021-04-13', 19, 19, 674.66, 15);
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-06', 3, '2021-04-27', '2021-04-27', '2021-04-17', 16, 19, 354.77, 16);
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-07', 3, '2021-04-27', '2021-04-27', '2021-04-16', 8, 14, 784.43, 17);
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-08', 3, '2021-04-27', '2021-04-27', '2021-04-15', 4, 4, 546.78, 18);
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-09', 4, '2021-04-26', '2021-04-26', '2021-04-14', 15, 15, 453.88, 19);
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-10', 8,'2021-04-23' , '2021-04-23', '2021-04-13', 10, 21, 846.99, 20);
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-11', 8,'2021-04-23' ,'2021-04-23' , '2021-04-13', 16, 18, 463.89, 20);
+insert into Offerings_Has_Handles (launch_date, course_id, start_date, end_date, registration_deadline, target_number_registrations, seating_capacity, fees, eid) values ('2021-01-12', 10, '2021-04-26','2021-04-26' , '2021-04-14', 5, 13, 870.54, 20);
+
+-- Sessions_Conducts_Consists
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-01', '09:00', '10:00', '2021-04-30', 1, 21, 1);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (2, '2021-01-01', '11:00', '12:00', '2021-04-30', 1, 21, 1);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (3, '2021-01-01', '16:00', '17:00', '2021-04-30', 2, 21, 1);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-02', '09:00', '10:00', '2021-04-29', 2, 21, 2);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (2, '2021-01-02', '11:00', '12:00', '2021-04-29', 2, 21, 2);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (3, '2021-01-02', '16:00', '17:00', '2021-04-29', 3, 21, 2);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-03', '10:00', '11:00', '2021-04-28', 3, 21, 2);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (2, '2021-01-03', '16:00', '17:00', '2021-04-28', 8, 21, 2);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (3, '2021-01-03', '14:00', '15:00', '2021-04-28', 10, 21, 2);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-04', '09:00', '10:00', '2021-04-26', 1, 21, 2);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (2, '2021-01-04', '10:00', '11:00', '2021-04-26', 6, 22, 2);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (3, '2021-01-04', '14:00', '15:00', '2021-04-26', 7, 21, 2);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (4, '2021-01-04', '17:00', '18:00', '2021-04-26', 7, 21, 2);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-05', '14:00', '15:00', '2021-04-27', 2, 22, 3);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (2, '2021-01-05', '15:00', '16:00', '2021-04-27', 3, 28, 3);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (3, '2021-01-05', '16:00', '17:00', '2021-04-27', 4, 22, 3);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-06', '14:00', '15:00', '2021-04-27', 4, 29, 3);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (2, '2021-01-06', '15:00', '16:00', '2021-04-27', 8, 33, 3);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (3, '2021-01-06', '16:00', '17:00', '2021-04-27', 9, 29, 3);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-07', '14:00', '15:00', '2021-04-27', 3, 38, 3);
+
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (2, '2021-01-07', '15:00', '16:00', '2021-04-27', 5, 39, 3);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (3, '2021-01-07', '16:00', '17:00', '2021-04-27', 10, 38, 3);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-08', '14:00', '15:00', '2021-04-27', 6, 40, 3);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-09', '11:00', '12:00', '2021-04-26', 1, 28, 4);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (2, '2021-01-09', '15:00', '16:00', '2021-04-26', 6, 22, 4);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (3, '2021-01-09', '17:00', '18:00', '2021-04-26', 9, 22,  4);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-10', '09:00', '10:00', '2021-04-23', 7, 22, 8);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (2, '2021-01-10', '11:00', '12:00', '2021-04-23', 8, 22, 8);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (3, '2021-01-10', '14:00', '15:00', '2021-04-23', 9, 22, 8);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-11', '09:00', '10:00', '2021-04-23', 1, 24, 8);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (2, '2021-01-11', '11:00', '12:00', '2021-04-23', 2, 24, 8);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (3, '2021-01-11', '14:00', '15:00', '2021-04-23', 3, 24, 8);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (1, '2021-01-12', '10:00', '11:00', '2021-04-26', 5, 23, 10);
+insert into Sessions_Conducts_Consists (sid, launch_date, start_time, end_time, date, rid, eid, course_id) values (2, '2021-01-12', '15:00', '16:00', '2021-04-26', 7, 23, 10);
+
+-- Register
+insert into Register (number, sid, launch_date, course_id) values ('6203493828861897', 3, '2021-01-07', 3);
+insert into Register (number, sid, launch_date, course_id) values ('6203493828861897', 2, '2021-01-03', 2);
+insert into Register (number, sid, launch_date, course_id) values ('6500226978955956', 1, '2021-01-08', 3);
+insert into Register (number, sid, launch_date, course_id) values ('6500226978955956', 3, '2021-01-09', 4);
+insert into Register (number, sid, launch_date, course_id) values ('8820149867343986', 2, '2021-01-03', 2);
+insert into Register (number, sid, launch_date, course_id) values ('8820149867343986', 1, '2021-01-05', 3);
+insert into Register (number, sid, launch_date, course_id) values ('4788874639126448', 2, '2021-01-02', 2);
+insert into Register (number, sid, launch_date, course_id) values ('4788874639126448', 2, '2021-01-01', 1);
+insert into Register (number, sid, launch_date, course_id) values ('6201377713642235', 3, '2021-01-02', 2);
+insert into Register (number, sid, launch_date, course_id) values ('6201377713642235', 1, '2021-01-01', 1);
+insert into Register (number, sid, launch_date, course_id) values ('6364690085116833', 1, '2021-01-12', 10);
+insert into Register (number, sid, launch_date, course_id) values ('5019858506647485', 2, '2021-01-12', 10);
+
+-- Cancels
+insert into Cancels (package_credit, sid, cust_id, launch_date, course_id, register_date) values (224.11, 3, 1, '2021-01-09', 4, current_date);
+insert into Cancels (package_credit, sid, cust_id, launch_date, course_id, register_date) values (166.67, 2, 2, '2021-01-10', 8, current_date);
+insert into Cancels (package_credit, sid, cust_id, launch_date, course_id, register_date) values (0.00, 1, 3, '2021-01-06', 3, current_date);
+insert into Cancels (package_credit, sid, cust_id, launch_date, course_id, register_date) values (224.11, 3, 4, '2021-01-03', 2, current_date);
+insert into Cancels (package_credit, sid, cust_id, launch_date, course_id, register_date) values (0.00, 3, 5, '2021-01-06', 3, current_date);
+insert into Cancels (refund_amt, sid, cust_id, launch_date, course_id, register_date) values (0.00, 2, 1, '2021-01-05', 3, current_date);
+insert into Cancels (refund_amt, sid, cust_id, launch_date, course_id, register_date) values (319.29, 3, 2, '2021-01-06', 3, current_date);
+insert into Cancels (refund_amt, sid, cust_id, launch_date, course_id, register_date) values (0.00, 2, 3, '2021-01-02', 2, current_date);
+insert into Cancels (refund_amt, sid, cust_id, launch_date, course_id, register_date) values (0.00, 1, 4, '2021-01-10', 8, current_date);
+insert into Cancels (refund_amt, sid, cust_id, launch_date, course_id, register_date) values (0.00, 3, 5, '2021-01-04', 2, current_date);
+insert into Cancels (refund_amt, sid, cust_id, launch_date, course_id, register_date) values (0.00, 2, 9, '2021-01-11', 8, current_date);
+
+-- Buys
+insert into Buys (number, package_id, num_remaining_redemptions) values ('6203493828861897', 1, 2);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('6203493828861897', 4, 4);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('6500226978955956', 1, 2);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('6500226978955956', 5, 2);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('8820149867343986', 2, 2);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('8820149867343986', 6, 4);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('4788874639126448', 3, 1);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('6201377713642235', 2, 2);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('6201377713642235', 5, 2);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('6393483847663838', 1, 3);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('3406668633600187', 3, 3);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('6364690085116833', 1, 4);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('5019858506647485', 2, 3);
+insert into Buys (number, package_id, num_remaining_redemptions) values ('3034275660436553', 3, 4);
+
+-- Redeem
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '6203493828861897', 1, 1, '2021-01-01', 1);
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '6203493828861897', 1, 1, '2021-01-02', 2);
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '6500226978955956', 1, 2, '2021-01-01', 1);
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '6500226978955956', 1, 2, '2021-01-02', 2);
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '8820149867343986', 2, 3, '2021-01-01', 1);
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '8820149867343986', 2, 1, '2021-01-04', 2);
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '4788874639126448', 3, 3, '2021-01-09', 4);
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '4788874639126448', 3, 1, '2021-01-08', 3);
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '6201377713642235', 2, 2, '2021-01-03', 2);
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '6201377713642235', 2, 2, '2021-01-07', 3);
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '6393483847663838', 1, 1, '2021-01-10', 8);
+insert into Redeem (buy_date, number, package_id, sid, launch_date, course_id) values (current_date, '3406668633600187', 3, 2, '2021-01-11', 8);
+
+-- Specializes
+insert into Specializes(eid, name) values(21, 'A');
+insert into Specializes(eid, name) values(21, 'C');
+insert into Specializes(eid, name) values(22, 'A');
+insert into Specializes(eid, name) values(22, 'B');
+insert into Specializes(eid, name) values(22, 'D');
+insert into Specializes(eid, name) values(23, 'C');
+insert into Specializes(eid, name) values(23, 'E');
+insert into Specializes(eid, name) values(23, 'G');
+insert into Specializes(eid, name) values(24, 'A');
+insert into Specializes(eid, name) values(24, 'D');
+insert into Specializes(eid, name) values(25, 'D');
+insert into Specializes(eid, name) values(25, 'E');
+insert into Specializes(eid, name) values(25, 'H');
+insert into Specializes(eid, name) values(26, 'A');
+insert into Specializes(eid, name) values(26, 'C');
+insert into Specializes(eid, name) values(26, 'D');
+insert into Specializes(eid, name) values(27, 'A');
+insert into Specializes(eid, name) values(27, 'D');
+insert into Specializes(eid, name) values(27, 'E');
+insert into Specializes(eid, name) values(27, 'F');
+insert into Specializes(eid, name) values(28, 'B');
+insert into Specializes(eid, name) values(28, 'C');
+insert into Specializes(eid, name) values(29, 'B');
+insert into Specializes(eid, name) values(29, 'G');
+insert into Specializes(eid, name) values(30, 'A');
+insert into Specializes(eid, name) values(30, 'D');
+insert into Specializes(eid, name) values(30, 'H');
+insert into Specializes(eid, name) values(31, 'A');
+insert into Specializes(eid, name) values(31, 'F');
+insert into Specializes(eid, name) values(31, 'H');
+insert into Specializes(eid, name) values(31, 'L');
+insert into Specializes(eid, name) values(32, 'D');
+insert into Specializes(eid, name) values(32, 'G');
+insert into Specializes(eid, name) values(32, 'M');
+insert into Specializes(eid, name) values(32, 'Q');
+insert into Specializes(eid, name) values(33, 'B');
+insert into Specializes(eid, name) values(33, 'E');
+insert into Specializes(eid, name) values(33, 'J');
+insert into Specializes(eid, name) values(34, 'C');
+insert into Specializes(eid, name) values(34, 'D');
+insert into Specializes(eid, name) values(35, 'A');
+insert into Specializes(eid, name) values(35, 'L');
+insert into Specializes(eid, name) values(35, 'N');
+insert into Specializes(eid, name) values(36, 'C');
+insert into Specializes(eid, name) values(36, 'D');
+insert into Specializes(eid, name) values(36, 'G');
+insert into Specializes(eid, name) values(36, 'L');
+insert into Specializes(eid, name) values(37, 'A');
+insert into Specializes(eid, name) values(37, 'E');
+insert into Specializes(eid, name) values(38, 'B');
+insert into Specializes(eid, name) values(38, 'D');
+insert into Specializes(eid, name) values(38, 'E');
+insert into Specializes(eid, name) values(39, 'B');
+insert into Specializes(eid, name) values(39, 'D');
+insert into Specializes(eid, name) values(40, 'A');
+insert into Specializes(eid, name) values(40, 'B');
+insert into Specializes(eid, name) values(40, 'C');
+insert into Specializes(eid, name) values(40, 'D');

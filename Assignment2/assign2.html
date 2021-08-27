@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>CS2102 Assignment 2 (SQL)</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+table.tableblock{max-width:100%;border-collapse:separate}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article toc2 toc-left">
+<div id="header">
+<h1>CS2102 Assignment 2 (SQL)</h1>
+<div id="toc" class="toc2">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#_examplify_instructions">1. Examplify Instructions</a></li>
+<li><a href="#_assignment_instructions">2. Assignment Instructions</a></li>
+<li><a href="#_database_schema">3. Database Schema</a></li>
+<li><a href="#_questions">4. Questions</a></li>
+<li><a href="#_what_to_do">5. What to do</a></li>
+<li><a href="#_testing_your_queries">6. Testing your queries</a></li>
+<li><a href="#_debugging_your_queries">7. Debugging your queries</a></li>
+<li><a href="#_psqls_quiet_mode">8. Psql&#8217;s quiet mode</a></li>
+</ul>
+</div>
+</div>
+<div id="content">
+<div id="preamble">
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The assignment consists of 10 one-mark questions and is due on <strong class="red">March 19 (Friday) at 6pm</strong>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Late submission penalty: One mark will be deducted for each late day up to two late days; submissions after the second late day will receive zero marks and will not be graded.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>The assignment is to be submitted using <strong class="red">Examplify</strong>.</p>
+</li>
+<li>
+<p>As the assignment will be  auto-graded, it is <strong>very important</strong> that your submitted answers conform to the  requirements in <a href="#_assignment_instructions">Assignment Instructions</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examplify_instructions">1. Examplify Instructions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Download the Examplify assignment. You can only download it once.</p>
+</li>
+<li>
+<p>The password for this assignment is <strong>cs2102sql</strong>.
+The password is needed to start the assignment on Examplify and to resume from a suspended session.</p>
+</li>
+<li>
+<p>Once you start the assignment with Examplify, you are given a time limit of <strong>1000 minutes</strong> (i.e., 16 hours 40 minutes) to complete and submit the assignment. This is the maximum time configurable using Examplify.</p>
+</li>
+<li>
+<p><strong>Suspending Assignment</strong> You can suspend the assignment (as well as the timer) by clicking on 'Suspend Exam' from the 'Exam Controls' menu.
+To resume the suspended assignment, you need to enter the assignment password (Examplify refers to this as the Exam password).
+You can find screenshots on
+<a href="https://wiki.nus.edu.sg/pages/viewpage.action?pageId=230556734">how to suspend and resume the assignment</a>.
+It is <strong>important</strong> that you remember to suspend the Examplify assignment if you are taking a break from the Examplify session.
+If you leave the Examplify session running, when the timer time out, Examplify will automatically submit your partially completed assignment and you will not be able to resume the assignment!
+To resume from a suspended session, enter the assignment password and press "Resume Exam".</p>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Submitting Assignment</strong> It is important that you submit your assignment by the deadline and before the timer times out.
+You will not be able to submit after your timer has timed out or after the deadline (even if your Examplify timer has not counted down to zero).  Once you have submitted the assignment, you will not be able to make any changes to your answers.  It is important that you ensure that you&#8217;ve answered all the questions and that the entered answers are indeed the intended answers for the specific questions before you click the 'Submit' button.  You can find screenshots on
+<a href="https://wiki.nus.edu.sg/pages/viewpage.action?pageId=187598226">how to submit the assignment</a>.</p>
+</li>
+<li>
+<p><strong>Troubleshooting</strong> If you encounter any technical problems while using Examplify, please refer to
+<a href="https://wiki.nus.edu.sg/display/DA/General+Support+and+Troubleshooting">Troubleshooting Guide</a>
+to see if the problem can be resolved following the guidelines there. If the problem can&#8217;t be resolved, please send an email to CIT at <strong>citbox25@nus.edu.sg</strong>  (and cc the lecturer in the email).
+You must not uninstall/reinstall Examplify after you&#8217;ve downloaded the assignment.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_assignment_instructions">2. Assignment Instructions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As the assignment will be  auto-graded, it is <strong>very important</strong> that your submitted answers conform to the following requirements.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>For each question, you are to write a <strong>single CREATE OR REPLACE VIEW SQL statement</strong> to answer the question.
+You MUST use the view schema provided for each question without changing any part of the view schema (i.e., view name, column names, or the order of the columns). For example, the provided view schema for Question 1 is "v1 (pizza)", and if your  answer to this question is the query "SELECT pizza FROM Likes where cname = 'Bob'",  then you must enter your answer in the answer box as follows:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-sql" data-lang="sql">	CREATE OR REPLACE VIEW v1 (pizza) AS
+	SELECT pizza
+	FROM Likes
+	WHERE cname = 'Bob';</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Each CREATE view statement must terminate with a semicolon.</p>
+</li>
+<li>
+<p>Each answer must be a syntactically valid SQL query without any typographical errors: a SQL answer that is syntactically invalid or contains very minor typographical error will receive 0 marks even if the answer is semantically correct.</p>
+</li>
+<li>
+<p>For each question, your answer view <strong>must not contain any duplicate records</strong>.</p>
+</li>
+<li>
+<p>You must not enter any extraneous text for your answer
+(e.g., "My answer is: CREATE OR REPLACE VIEW v1 (pizza) AS SELECT pizza FROM Likes;") or enter multiple answers (i.e., submit multiple SQL statements).</p>
+</li>
+<li>
+<p>Each question must be answered independently of other questions:
+the answer for a question must not refer to any other view that is created for another question.</p>
+</li>
+<li>
+<p>You are allowed to create the answer view using a single CTE statement (defining possibly multiple temporary tables).
+If your answer uses a CTE statement to define temporary table(s), you <strong>must not</strong> use any of the following table names:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Names that are used by the application&#8217;s schema (e.g., Pizzas, Likes)</p>
+</li>
+<li>
+<p>Names that are used by the 10 answer views: v1, v2, &#8230;&#8203;, v9, v10.</p>
+</li>
+<li>
+<p>Any table name that begins with the prefix <strong>zz</strong>.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>If your answer uses the CTE statement, you must define <strong>at most 4 temporary tables</strong>.</p>
+</li>
+<li>
+<p>Your answers must not use SQL constructs that are not covered in class (e.g., window functions).</p>
+</li>
+<li>
+<p>Your answers must be executable on PostgreSQL.</p>
+</li>
+<li>
+<p>It is not necessary to write comments in your answer. If you choose to write comments, you should not use SQL comments that begin with two hyphen characters to avoid a potential copy-and-paste problem that results in a query being copied over as a single line with SQL code being commented out (e.g., "CREATE OR REPLACE VIEW v1(pizza) AS SELECT pizza&#8201;&#8212;&#8201;yada yada FROM Likes;").  Using C-style SQL comments are fine (e.g., "CREATE OR REPLACE VIEW v1(pizza) AS SELECT pizza /* yada yada */ FROM Likes;").</p>
+</li>
+<li>
+<p>To help you test and debug your answers on PostgreSQL, we will provide 7 database instances for your testing.
+We recommend the following approach to complete this assignment:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>First, test and debug your queries on PostgreSQL using the provided test cases.</p>
+</li>
+<li>
+<p>Next, copy each tested query to the appropriate answer box in the Examplify assignment.</p>
+</li>
+<li>
+<p>Check that each copied query is indeed your intended answer before submitting the assignment.
+You will not be allowed to submit any changes to your answers after they have been uploaded to Examplify.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_database_schema">3. Database Schema</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The questions are based on the pizza database schema that we&#8217;ve been using in class.</p>
+</div>
+<div class="paragraph">
+<p>Specifically, the relational schema consists of the following 5 tables:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-sql" data-lang="sql">CREATE TABLE Pizzas (
+	pizza 			TEXT,
+	PRIMARY KEY 		(pizza)
+);
+
+CREATE TABLE Restaurants (
+	rname 			TEXT,
+	area			TEXT not null,
+	PRIMARY KEY 		(rname)
+);
+
+CREATE TABLE Customers (
+	cname 			TEXT,
+	area			TEXT not null,
+	PRIMARY KEY 		(cname)
+);
+
+CREATE TABLE Sells (
+	rname 			TEXT,
+	pizza			TEXT,
+	price			INTEGER not null,
+	PRIMARY KEY 		(rname,pizza),
+	FOREIGN KEY 		(rname) REFERENCES Restaurants (rname),
+	FOREIGN KEY 		(pizza) REFERENCES Pizzas (pizza)
+);
+
+CREATE TABLE Likes (
+	cname 			TEXT,
+	pizza			TEXT,
+	PRIMARY KEY 		(cname,pizza),
+	FOREIGN KEY 		(cname) REFERENCES Customers (cname),
+	FOREIGN KEY 		(pizza) REFERENCES Pizzas (pizza)
+);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_questions">4. Questions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Question 1</strong>
+Find all pizzas sold by restaurants that are located in the same area as Bob.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Answer the question by creating a SQL view with the schema shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>CREATE OR REPLACE VIEW v1 (pizza) AS ;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Question 2</strong>
+Find all customers who like at least two different pizzas.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Answer the question by creating a SQL view with the schema shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>CREATE OR REPLACE VIEW v2 (cname) AS ;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Question 3</strong>
+Given two restaurants R1 and R2, we say that R1 is more expensive than R2 if for every pizza P
+that is sold by both R1 and R2, R1’s selling price for P is higher than R2’s selling price for P .
+Find all pairs of restaurants (R1,R2) where R1 is more expensive than R2. Exclude restaurant
+pairs that do not sell any common pizza.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Answer the question by creating a SQL view with the schema shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>CREATE OR REPLACE VIEW v3 (rname1, rname2) AS ;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Question 4</strong>
+We say that a restaurant R is <strong>interesting</strong> if R satisfies at least one of the following conditions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>R is located in the 'Central' area, or</p>
+</li>
+<li>
+<p>R sells at least ten pizzas, or</p>
+</li>
+<li>
+<p>the price of every pizza sold by R is at most $20.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Find all interesting restaurants.</p>
+</div>
+<div class="paragraph">
+<p>Answer the question by creating a SQL view with the schema shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>CREATE OR REPLACE VIEW v4 (rname) AS ;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Question 5</strong>
+You are given a budget of $40 to buy two distinct pizzas from the same restaurant. Find all
+restaurants that you could buy from (without exceeding your budget).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Answer the question by creating a SQL view with the schema shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>CREATE OR REPLACE VIEW v5 (rname) AS ;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Question 6</strong>
+Three friends (Moe, Larry, and Curly) plan to share three pizzas for dinner at a restaurant that
+must satisfy all these requirements:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the three pizzas ordered must be distinct pizzas,</p>
+</li>
+<li>
+<p>the total cost of the three pizzas must not exceed $80,</p>
+</li>
+<li>
+<p>each of the three pizzas must be liked by at least one of the friends, and</p>
+</li>
+<li>
+<p>each of the friends must like at least two of the three pizzas (the pair of pizzas liked by each
+of them do not necessarily have to be the same).</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Find all (R,P1,P2,P3,TC) tuples where the three friends could share the pizzas {P1,P2,P3} from
+the restaurant R with a total cost of TC such that P1 &lt; P2 &lt; P3.</p>
+</div>
+<div class="paragraph">
+<p>Answer the question by creating a SQL view with the schema shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>CREATE OR REPLACE VIEW v6 (rname, pizza1, pizza2, pizza3, totalcost) AS ;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Question 7</strong>
+Given a restaurant R, let numPizza(R) denote the number of pizzas sold by R and priceRange(R)
+denote the difference between the maximum and minimum prices of pizzas sold by R. If R does
+not sell any pizzas, then numPizza(R) = 0 and priceRange(R) = 0.
+Given two restaurants, R1 and R2, we say that R1 is more diverse than R2 if either (a) numPizza(R1) &gt;
+numPizza(R2) and priceRange(R1) ≥ priceRange(R2), or (b) numPizza(R1) ≥ numPizza(R2)
+and priceRange(R1) &gt; priceRange(R2).
+Find all restaurants R such that there does not exist any restaurant R2 that is more diverse than R.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Answer the question by creating a SQL view with the schema shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>CREATE OR REPLACE VIEW v7 (rname) AS ;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Question 8</strong>
+For each area A where there is some customer, find the following information:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>the area name of A,</p>
+</li>
+<li>
+<p>the total number of customers located in A,</p>
+</li>
+<li>
+<p>the total number of restaurants located in A, and</p>
+</li>
+<li>
+<p>the price of the most expensive pizza sold by restaurants in A; if there are no restaurants selling pizzas in A, show the value 0.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Answer the question by creating a SQL view with the schema shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>CREATE OR REPLACE VIEW v8 (area, numCust, numRest, maxPrice) AS ;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Question 9</strong>
+We say that a customer C is <strong>happy</strong> if for each pizza P that C likes, there are at least two restaurants, which are located in the same area as C, that sells P.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For example, if Alice likes only pizzas P1 and P2, then Alice will be happy if (1) restaurants RA and RB both sell P1; (2) restaurants RC and RD both sell P2; and (3) restaurants RA, RB, RC and RD are all located in the same area as Alice.
+Note that it does not matter whether {RA,RB} and {RC,RD} are the same or different set of restaurants.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Find all happy customers.  Exclude customers who do not like any pizza.</p>
+</div>
+<div class="paragraph">
+<p>Answer the question by creating a SQL view with the schema shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>CREATE OR REPLACE VIEW v9 (cname) AS ;</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Question 10</strong>
+We say that a <strong>pizza P is a popular pizza in area A</strong> if</p>
+<div class="ulist">
+<ul>
+<li>
+<p>P is sold by some restaurant in area A, and</p>
+</li>
+<li>
+<p>for every pizza P', the number of restaurants located in A that sell P' is no more than the number of restaurants located in A that sell P.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We say that a <strong>pizza P is a popular pizza</strong> if for every pizza P', the number of areas in which P' is popular is no more than the number of areas in which P is popular.</p>
+</div>
+<div class="paragraph">
+<p>Find all popular pizzas.  Exclude pizzas that are not sold by any restaurant.</p>
+</div>
+<div class="paragraph">
+<p>Answer the question by creating a SQL view with the schema shown below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>CREATE OR REPLACE VIEW v10 (pizza) AS ;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_what_to_do">5. What to do</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Copy and unzip the file named <strong>cs2102-assign2.zip</strong> from the stu server to your home directory:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ cp /home/course/cs2102/public_html/sql/cs2102-assign2.zip ~
+$ unzip  cs2102-assign2.zip</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The zip file can also be downloaded using the wget command:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ wget https://www.comp.nus.edu.sg/~cs2102/sql/cs2102-assign2.zip</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The unzipped directory <strong>cs2102-assign2</strong> contains the following 19 files:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>answers.sql</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This is a template file for you to write your SQL answers.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>debug1.sql, &#8230;&#8203;, debug10.sql</p>
+<div class="ulist">
+<ul>
+<li>
+<p>These are SQL scripts to help with debugging.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>load-db1.sql, &#8230;&#8203;, load-db7.sql</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Theses are SQL scripts to load the test case databases.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>psql-quiet.txt</p>
+<div class="ulist">
+<ul>
+<li>
+<p>This is a psql script to configure psql.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_testing_your_queries">6. Testing your queries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how to test your queries using the provided test cases on the stu server.</p>
+</div>
+<div class="paragraph">
+<p>First, connect to the PostgreSQL server using <strong>psql</strong> on stu server following the instructions in <strong>postgresql-soc.pdf</strong> (available at LumiNUS &#8594; Files &#8594; Project).</p>
+</div>
+<div class="paragraph">
+<p>Use the function <strong>sinit</strong> to create the assignment&#8217;s database schema as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cs2102=&gt;  select sinit();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To test your query for a question, you need to first execute the view definition for your query.
+If your view definition is stored in the file answers.sql, you can execute the file as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cs2102=&gt;  \i answers.sql</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are 10 functions named <strong>stest1</strong> to <strong>stest10</strong> that you can use to test your queries for the 10 questions.
+For example, to test your submitted query for question 3, use the function stest1 as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cs2102=&gt;  select stest1();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If your query passes all the 7 test cases, you should see something like the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cs2102=&gt; select stest1();
+        stest1
+-----------------------
+ Test case 1 - CORRECT
+ Test case 2 - CORRECT
+ Test case 3 - CORRECT
+ Test case 4 - CORRECT
+ Test case 5 - CORRECT
+ Test case 6 - CORRECT
+ Test case 7 - CORRECT
+(7 rows)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As you should know by now, a query that passes all the provided test cases does not necessarily mean that the query is indeed correct.
+The grading of this assignment will be using both the provided test cases as well as additional test cases.</p>
+</div>
+<div class="paragraph">
+<p>Here&#8217;s an example of the output produced by an incorrect query:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cs2102=&gt; select test1();
+                stest1
+--------------------------------------
+ Test case 1 - INCORRECT: MISSING = 1
+ Test case 2 - INCORRECT: EXTRA = 2
+ Test case 3 - INCORRECT: MISSING = 3
+ Test case 4 - CORRECT
+ Test case 5 - CORRECT
+ Test case 6 - INCORRECT: EXTRA = 2
+ Test case 7 - INCORRECT: EXTRA = 2
+(7 rows)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above output indicates that the submitted query only passes test cases 4 and 5.
+For test cases 1 and 3, there are some tuple(s) that are missing in the submitted query&#8217;s output relative to the correct output.
+Specifically, for test case 1, the submitted answer&#8217;s output differs from the correct output with 1 tuple that is contained in the correct output but is missing from the submitted query&#8217;s output.
+For test cases 2, 6, and 7, there are some extra tuple(s) that are present in the submitted query&#8217;s output relative to the correct output.
+Specifically, for test case 2, the submitted answer&#8217;s output differs from the correct output with 2 tuples that are contained in the submitted query&#8217;s output but are missing from the correct output.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_debugging_your_queries">7. Debugging your queries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Continuing with the earlier example for the incorrect query for question 1,
+you can find out the detailed output comparisons for this query by executing the script <strong>debug1.sql</strong>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cs2102=&gt; \i debug1.sql</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following partial output shows the detailed comparison for test case 7 for the submitted query for question 1.
+Specifically, it shows the 2 extra tuples that are present in the submitted query&#8217;s output.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>  pizza   | Test case 7
+----------+-------------
+ Marinara | EXTRA
+ Funghi   | EXTRA
+(2 rows)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally, you may use any of the SQL scripts load-db1.sql, &#8230;&#8203;, load-db7.sql  to load the database of a specific test case.
+As an example, you can examine the contents of the database for test case 1 as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cs2102=&gt; \i load-db1.sql
+cs2102=&gt; select * from pizzas;
+   pizza
+------------
+ Diavola
+ Funghi
+ Hawaiian
+ Margherita
+ Marinara
+ Siciliana
+(6 rows)</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_psqls_quiet_mode">8. Psql&#8217;s quiet mode</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As the default mode of psql is quite verbose (it echos each of the executed commands),
+you can configure psql to be quieter by executing the psql commands in  <strong>psql-quiet.txt</strong>.
+The execution of psql-quiet.txt needs only be done once for each psql session.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cs2102=&gt; \i psql-quiet.txt</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, you could setup psql&#8217;s configuration file as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>$ cp psql-quiet.txt ~/.psqlrc</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
